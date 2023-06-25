@@ -10,4 +10,7 @@ package kelompok.pkg13.uas.pbo.pkg2023;
  */
 public class KalkulasiHarga {
     
+    public void harga (){
+        System.out.println("Heelo world");
+    }
 }
