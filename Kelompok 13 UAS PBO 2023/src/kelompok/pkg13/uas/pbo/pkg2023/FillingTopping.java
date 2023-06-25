@@ -9,5 +9,5 @@ package kelompok.pkg13.uas.pbo.pkg2023;
  * @author ASUS
  */
 public class FillingTopping {
-    
+    int var = 1;
 }
