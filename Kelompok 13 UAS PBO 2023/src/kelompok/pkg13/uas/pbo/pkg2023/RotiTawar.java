@@ -133,7 +133,7 @@ public class RotiTawar extends FillingTopping implements Adonan{
 
     @Override
     public double beratTotalAdonan() {
-        double TotalAdonan = this.hargaTepungTerigu() ;
+        double TotalAdonan = this.beratTepungTerigu() + this.beratGula() + this.beratButter() + this.beratRagi() + this.beratSusuBubuk () + this.beratSusuCair() + this.beratTelur() + this.beratEsBatu();
         return TotalAdonan ;
         // throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
