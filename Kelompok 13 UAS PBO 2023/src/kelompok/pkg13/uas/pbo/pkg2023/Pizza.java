@@ -115,5 +115,9 @@ public class Pizza extends FillingTopping implements HargaKomposisi{
        double total = this.hargaTepungTerigu()*1000 + this.hargaGula()*100 + this.hargaButter()*100 + this.hargaRagi()*20 + this.hargaSusuBubuk()*200 + this.hargaTelur()*50 + this.hargaEsBatu()*300;
        return total;
     }
+    
+    public double hargaRoti(){
+        return (this.totalHargaTopping() + this.hargaTotalAdonan())/(1950/190);
+    }
 }
     
