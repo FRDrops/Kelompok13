@@ -11,16 +11,16 @@ package kelompok.pkg13.uas.pbo.pkg2023;
 
 
 public class KalkulasiHarga {
-    int a;
-    int b;
+    int a1;
+    int a2;
+    int a3;
+    int b1;
+    int b2;
     int c;
-    int akg;
-    int bkg;
-    int ckg;
-
-    void JumlahRoti(){
-        a = akg/50;
-        b = bkg/400;
-        c = ckg/190;
-    }
+    int akg1 = a1*65;
+    int akg2 = a2*65;
+    int akg3 = a3*70;
+    int bkg1 = b1*480;
+    int bkg2 = b2*480;
+    int ckg = c/250;
 }

@@ -11,7 +11,9 @@ import Interfaceses.HargaKomposisi;
  * @author ASUS
  */
 public class RotiManis extends FillingTopping implements HargaKomposisi {
-
+    int a1;
+    int a2;
+    int a3;
     @Override
     public double hargaKeju() {
         return 31000/250;
@@ -121,14 +123,20 @@ public class RotiManis extends FillingTopping implements HargaKomposisi {
     }
     
     public double hargaVar1(){
-        return (this.hargaKeju()*5) + ((this.hargaCoklat()*5)*2);
+        return (this.hargaKeju()*5) + ((this.hargaCoklat()*5)*2 + (this.hargaTotalAdonan()/47));
     }
     
     public double hargaVar2(){
-        return (this.hargaSelaiRedBean()*10) + (this.hargaVanilla()*10);
+        return (this.hargaSelaiRedBean()*10) + (this.hargaVanilla()*10) + (this.hargaTotalAdonan()/47);
     }
     
     public double hargaVar3(){
-        return (this.hargaKeju()*10) + (this.hargaSosis()*10);    }
+        return (this.hargaKeju()*10) + (this.hargaSosis()*10) + (this.hargaTotalAdonan()/47);    }
     
+    double modalRM (){
+        return this.hargaVar1() + hargaVar2()*a2 + hargaVar3()*a3;
+     }
+    double hargaJualRM(){
+         return (1.4 * this.modalRM()) + this.modalRM();
+     }
 }

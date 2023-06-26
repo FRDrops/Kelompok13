@@ -144,4 +144,12 @@ public class RotiTawar extends FillingTopping implements HargaKomposisi{
     public double VarianKeju(){
         return this.hargaKeju() + (this.hargaTotalAdonan()/(2065/400));
     }
+    int b1;
+    int b2;
+    double modalRT (){
+         return (hargaTotalAdonan())*(b1+b2) + hargaKeju()*b2 + hargaCoklat()*b1;
+     }
+    double hargaJualRT(){
+         return (1.4 * this.modalRT()) + this.modalRT();
+     }
     }

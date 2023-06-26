@@ -1,9 +1,9 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Telates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Telates/Classes/Class.java to edit this telate
  */
 package kelompok.pkg13.uas.pbo.pkg2023;
-import Interfaceses.*;
+import Interfaceses.HargaKomposisi;
 /**
  *
  * @author ASUS
@@ -115,9 +115,17 @@ public class Pizza extends FillingTopping implements HargaKomposisi{
        double total = this.hargaTepungTerigu()*1000 + this.hargaGula()*100 + this.hargaButter()*100 + this.hargaRagi()*20 + this.hargaSusuBubuk()*200 + this.hargaTelur()*50 + this.hargaEsBatu()*300;
        return total;
     }
+    int c;
+    
+    double modalP(){
+          return (hargaTotalAdonan()*(c) + totalHargaTopping())* c;
+     }
     
     public double hargaRoti(){
         return this.totalHargaTopping() + (this.hargaTotalAdonan()/(1950/190));
     }
+    double hargaJualP(){
+         return (1.4 * this.modalP()) + this.modalP();
+     } 
 }
     
