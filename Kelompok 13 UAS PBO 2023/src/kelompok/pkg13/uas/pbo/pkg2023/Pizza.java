@@ -4,10 +4,12 @@
  */
 package kelompok.pkg13.uas.pbo.pkg2023;
 
+i
 /**
  *
  * @author ASUS
  */
-public class Pizza {
+public class Pizza extends FillingTopping implements HargaKomposisi implements Adonan {
     
+
 }
