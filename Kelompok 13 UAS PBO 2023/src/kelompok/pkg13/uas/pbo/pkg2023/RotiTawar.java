@@ -4,14 +4,13 @@
  */
 package kelompok.pkg13.uas.pbo.pkg2023;
 
-import Interfaceses.Adonan;
 import Interfaceses.HargaKomposisi;
 
 /**
  *
  * @author ASUS
  */
-public class RotiTawar extends FillingTopping implements Adonan{
+public class RotiTawar extends FillingTopping implements HargaKomposisi{
 
     @Override
     public double hargaKeju() {
@@ -76,64 +75,64 @@ public class RotiTawar extends FillingTopping implements Adonan{
     }
 
     @Override
-    public double beratTepungTerigu() {
+    public double hargaTepungTerigu() {
         double TepungTerigu = 40000/1000 ;
         return TepungTerigu ;
         // throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public double beratGula() {
+    public double hargaGula() {
         double Gula = 25000/1000 ;
         return Gula ;
         // throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public double beratButter() {
+    public double hargaButter() {
         double Butter = 23000/500 ;
         return Butter ;
         // throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public double beratRagi() {
+    public double hargaRagi() {
         double Ragi = 5000/11 ;
         return Ragi ;
         // throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public double beratSusuBubuk() {
+    public double hargaSusuBubuk() {
         double SusuBubuk = 39000/1000 ;
         return SusuBubuk ;
         // throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public double beratSusuCair() {
+    public double hargaSusuCair() {
         double SusuCair = 24000/1000 ;
         return SusuCair ;
         // throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public double beratTelur() {
+    public double hargaTelur() {
         double Telur = 23000/1000 ;
         return Telur ;
         // throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public double beratEsBatu() {
+    public double hargaEsBatu() {
         double EsBatu = 2000/1000;
         return EsBatu ;
         // throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public double beratTotalAdonan() {
-        double TotalAdonan = this.beratTepungTerigu() + this.beratGula() + this.beratButter() + this.beratRagi() + this.beratSusuBubuk () + this.beratSusuCair() + this.beratTelur() + this.beratEsBatu();
+    public double hargaTotalAdonan() {
+        double TotalAdonan = (this.hargaTepungTerigu() * 1000)+ (this.hargaGula() * 125 )+ (this.hargaButter()* 100)+ (this.hargaRagi()*20)+ (this.hargaSusuBubuk () * 250 ) + (this.hargaSusuCair()*200) + (this.hargaTelur()*70) + (this.hargaEsBatu()*200);
         return TotalAdonan ;
         // throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
