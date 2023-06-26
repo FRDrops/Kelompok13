@@ -6,49 +6,54 @@ package kelompok.pkg13.uas.pbo.pkg2023;
 
 /**
  *
- * @author ASUS
+ * @authorrm.ASUS
  */
 public class Kelompok13UASPBO2023 {
 
     /**
-     * @param args the command line arguments
+     * @paramrm.args the command linerm.arguments
      */
       
-    public static void main(String[] args) {
-        // TODO code application logic here
-        int a1 = 50;
-        int a2 = 100;
-        int a3 = 70;
-        int b1 = 20;
-        int b2 = 15;
-        int c = 10;
-        int akg1 = a1*65;
-        int akg2 = a2*65;
-        int akg3 = a3*70;
-        int bkg1 = b1*480;
-        int bkg2 = b2*480;
-        int ckg = c/250;
+    public static void main(String[]args) {
+        // TODO coderm.application logic here
         RotiManis rm = new RotiManis();
         RotiTawar rt = new RotiTawar();
         Pizza p = new Pizza();
         KalkulasiHarga KH = new KalkulasiHarga();
+        rm.a1 = 50;
+        rm.a2 = 100;
+        rm.a3 = 70;
+        rt.b1 = 20;
+        rt.b2 = 15;
+        p.c = 10;
+        int akg1 = rm.a1*65;
+        int akg2 = rm.a2*65;
+        int akg3 = rm.a3*70;
+        int bkg1 = rt.b1*480;
+        int bkg2 = rt.b2*480;
+        int ckg = p.c/250;
+        double total;
+        double totalm;
         p.modalP();
         rm.modalRM();
         rt.modalRT();
         p.hargaJualP();
         rm.hargaJualRM();
         rt.hargaJualRT();
+        total = rm.hargaJualRM() + rt.hargaJualRT() + p.hargaJualP();
+        totalm = rm.modalRM() + rt.modalRT() + p.modalP();
         
         
-        System.out.println("Pesanan anda: ");
-        System.out.println("1. Roti Manis Varian 1 " + a1 + " pcs" );
-        System.out.println("2. Roti Manis Varian 2 " + a2 + " pcs");
-        System.out.println("3. Roti Manis Varian 2 " + a3 + " pcs");
-        System.out.println("4. Roti Tawar Varian 1 " + b1 + " pcs");
-        System.out.println("5. Roti Tawar Varian 2 " + b2 + " pcs");
-        System.out.println("6. Pizza Varian 1 " + c + " pcs");
+        System.out.println("Pesananrm.anda: ");
+        System.out.println("1. Roti Manis Varian 1 " +rm.a1 + " pcs" );
+        System.out.println("2. Roti Manis Varian 2 " +rm.a2 + " pcs");
+        System.out.println("3. Roti Manis Varian 2 " +rm.a3 + " pcs");
+        System.out.println("4. Roti Tawar Varian 1 " + rt.b1 + " pcs");
+        System.out.println("5. Roti Tawar Varian 2 " + rt.b2 + " pcs");
+        System.out.println("6. Pizza Varian 1 " + p.c + " pcs");
         
-        System.out.println("Total Bayar " +  + rm.hargaJualRM() + rt.hargaJualRT() + p.hargaJualP());
+        System.out.println("Total Bayar " + Math.round(total) );
+        System.out.println("Total Modal " + Math.round(totalm));
         
     }
     
