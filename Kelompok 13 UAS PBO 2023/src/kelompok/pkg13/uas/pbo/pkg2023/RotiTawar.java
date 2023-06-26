@@ -137,4 +137,11 @@ public class RotiTawar extends FillingTopping implements HargaKomposisi{
         // throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
-}
+    public double VarianCoklat(){
+        return this.hargaCoklat() + (this.hargaTotalAdonan()/(2065/400));
+    }
+    
+    public double VarianKeju(){
+        return this.hargaKeju() + (this.hargaTotalAdonan()/(2065/400));
+    }
+    }
